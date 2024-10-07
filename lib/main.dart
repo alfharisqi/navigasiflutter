@@ -1,13 +1,20 @@
+// lib/main.dart
 import 'package:flutter/material.dart';
-import 'package:navigasiflutter/pages/home_page.dart';
-import 'package:navigasiflutter/pages/item_page.dart';
+import 'pages/home_page.dart'; // Import halaman utama
 
 void main() {
-  runApp(MaterialApp(
-    initialRoute: '/',
-    routes: {
-      '/': (context) => HomePage(),
-      '/item': (context) => ItemPage(),
-    },
-  ));
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Shopping App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomePage(), // Set HomePage sebagai halaman utama
+    );
+  }
 }
